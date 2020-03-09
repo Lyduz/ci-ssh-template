@@ -1,7 +1,7 @@
 # CI-SSH-Template
 ## Easy Cross Platform SSH CI/CD Template
 
-## This is a maintained fork of https://gitlab.com/gitlab-cd/ssh-template.
+## This is a maintained fork of https://github.com/Lyduz/ci-ssh-template.
 
 ## ssh
 ssh helper ease remote connection from gilab-ci to your ssh host.  
@@ -13,7 +13,7 @@ Simply authenticate and execute remote command on a single line.
 > **ssh_run** USER HOSTNAME $SSH_PRIVATE_KEY COMMAND  
 
 ```yaml
-include: 'https://gitlab.com/gitlab-cd/ssh-template/raw/master/ssh.yml'
+include: 'https://github.com/Lyduz/ci-ssh-template/raw/master/ssh.yml'
 
 clean:
 stage: build
@@ -33,7 +33,7 @@ Hereunder our use case :
 
 Example implementation in .gitlab-ci.yml :  
 ```yaml
-include: 'https://gitlab.com/gitlab-cd/ssh-template/raw/master/ssh.yml'
+include: 'https://github.com/Lyduz/ci-ssh-template/raw/master/ssh.yml'
 
 before_scripts:
 - ssh_init "$SSH_PRIVATE_KEY" "myownserver.com"
@@ -54,5 +54,5 @@ Note : you should not flag this variable as Protected if you want to use this va
 
 - Then include the ssh.yml script from your .gitlab-ci.yml
 ```yaml
-include: 'https://gitlab.com/gitlab-cd/ssh-template/raw/master/ssh.yml'
+include: 'https://github.com/Lyduz/ci-ssh-template/raw/master/ssh.yml'
 ````

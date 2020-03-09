@@ -43,12 +43,12 @@ ssh_init_sh:
         SSH_PRIVATE_KEY: $TEST_PRIVATE_KEY
         SSH_KNOWN_HOSTS: $TEST_HOST_NAME
     script:
-    - curl -sL https://gitlab.com/gitlab-cd/ssh-template/raw/master/ssh-init.sh | bash
+    - curl -sL https://github.com/Lyduz/ci-ssh-template/raw/master/ssh-init.sh | bash
     - ssh_run "ubuntu" "$TEST_HOST_NAME" "$TEST_PRIVATE_KEY" "ls -la ."
 
 ssh_init_sh_no_host:
     variables:
         SSH_PRIVATE_KEY: $TEST_PRIVATE_KEY
     script:
-    - curl -sL https://gitlab.com/gitlab-cd/ssh-template/raw/master/ssh-init.sh | bash
+    - curl -sL https://github.com/Lyduz/ci-ssh-template/raw/master/ssh-init.sh | bash
     - ssh_run "ubuntu" "$TEST_HOST_NAME" "$TEST_PRIVATE_KEY" "ls -la ."
